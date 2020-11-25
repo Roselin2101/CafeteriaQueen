@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.alto{
+  height: 400px;
+  background: blue;
+}
