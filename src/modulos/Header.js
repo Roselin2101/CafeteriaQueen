@@ -11,13 +11,13 @@ import React from "react";
             <img
               src="assets/imagenes/logo.png"
               alt="Maravillosas son tus Obras Dios"
-              className="rounded mx-auto d-block"
+              className="rounded mx-auto d-block  img-responsive"
               style={{ margin: 20 }}
             />
             <img
               src="assets/imagenes/titulo.png"
               alt="Maravillosas son tus Obras Dios"
-              className="rounded mx-auto d-block"
+              className="rounded mx-auto d-block  img-responsive"
               style={{ margin: 20 }}
             />
           </div>

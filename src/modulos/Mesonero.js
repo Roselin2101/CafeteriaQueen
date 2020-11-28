@@ -91,6 +91,10 @@ export const Mesonero = () => {
                     <MostrarProductos
                       productos={productos}
                       setProductoId={setProductoId}
+                      itemsOrden= {itemsOrden}
+                      totalPrecioPagar={totalPrecioPagar}
+                      setItemsOrden={setItemsOrden}
+                      setTotalPrecioPagar={setTotalPrecioPagar}
                     />
                   </div>
                 </div>
