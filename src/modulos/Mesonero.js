@@ -11,7 +11,6 @@ export const Mesonero = () => {
   const [itemsOrden, setItemsOrden] = React.useState([]);
   const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
 
-  
   React.useEffect(() => {
     setProductos(productosMenu.filter((item) => item.tipo === tipoProductoId));
   }, [tipoProductoId]);
@@ -45,8 +44,8 @@ export const Mesonero = () => {
       setTotalPrecioPagar(suma); //actualizo el estado suma
       setItemsOrden(itemsOrden);
     } else {
-      const _items = itemsOrden.filter((item) => item.id !== productoId);
-      setItemsOrden(_items);
+      const items = itemsOrden.filter((item) => item.id !== productoId);
+      setItemsOrden(items);
       const suma = totalPrecioPagar - itemsOrden[posicion].precio;
       setTotalPrecioPagar(suma);
       //eliminamos completo
@@ -56,11 +55,11 @@ export const Mesonero = () => {
   return (
     <>
       <Header />
-      <div className="col col-md-12">
+      <div className="col col-md-12 table-danger">
         <div className="row">
           <div className="col col-md-6">
             <div className="card">
-              <div className="card-header  text-center">Productos</div>
+              <div className="card-header text-center">Productos</div>
               <div className="card-body">
                 <div className="row">
                   <div className="col col-md-12 text-center">
@@ -71,7 +70,7 @@ export const Mesonero = () => {
                   <div className="col col-md-6 text-center">
                     <button
                       type="button"
-                      className="btn btn-danger  w-100"
+                      className="btn btn-danger w-100"
                       onClick={() => setTipoProductoId(2)}
                     >
                       Tortas
@@ -80,8 +79,9 @@ export const Mesonero = () => {
                   <div className="col col-md-6 text-center">
                     <button
                       type="button"
-                      className="btn btn-danger  w-100"
-                      onClick={() => setTipoProductoId(1)} >
+                      className="btn btn-danger w-100"
+                      onClick={() => setTipoProductoId(1)}
+                    >
                       Bebidas
                     </button>
                   </div>
@@ -91,7 +91,7 @@ export const Mesonero = () => {
                     <MostrarProductos
                       productos={productos}
                       setProductoId={setProductoId}
-                      itemsOrden= {itemsOrden}
+                      itemsOrden={itemsOrden}
                       totalPrecioPagar={totalPrecioPagar}
                       setItemsOrden={setItemsOrden}
                       setTotalPrecioPagar={setTotalPrecioPagar}
@@ -116,7 +116,12 @@ export const Mesonero = () => {
                     <div className="col col-md-5 text-center"></div>
                     <div className="col col-md-5 text-right">
                       Total: ${totalPrecioPagar}{" "}
-                      <button className="btn btn-primary" onClick={()=> alert("Hola me diste un click")}>Enviar Pedidos</button>
+                      <button
+                        className="btn btn-danger btn-block "
+                        onClick={() => alert("Hola me diste un click")}
+                      >
+                        Enviar
+                      </button>
                     </div>
                   </div>
                 </li>

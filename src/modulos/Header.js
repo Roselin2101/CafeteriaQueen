@@ -1,5 +1,6 @@
 import React from "react";
 
+
  const Header = () => {
 
   return (
@@ -8,17 +9,17 @@ import React from "react";
         <div className="row">
           <div className="col col-md-2"></div>
           <div className="col col-md-8">
-            <img
+          <a href="/"><img
               src="assets/imagenes/logo.png"
               alt="Maravillosas son tus Obras Dios"
-              className="rounded mx-auto d-block  img-responsive"
-              style={{ margin: 20 }}
-            />
+              className="rounded mx-auto d-block img-responsive"
+              style={{ margin: 10 }}
+            /> </a>
             <img
               src="assets/imagenes/titulo.png"
               alt="Maravillosas son tus Obras Dios"
-              className="rounded mx-auto d-block  img-responsive"
-              style={{ margin: 20 }}
+              className="rounded mx-auto d-block img-responsive"
+              style={{ margin: 10 }}
             />
           </div>
           <div className="col col-md-2"></div>

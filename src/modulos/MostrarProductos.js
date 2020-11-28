@@ -1,10 +1,11 @@
 import React from "react";
 
 const MostrarProductos = (props) => {
-
-const agregarProducto = (productoId)=>{
+  const agregarProducto = (productoId) => {
     if (productoId) {
-      const posicion = props.itemsOrden.map((item) => item.id).indexOf(productoId);
+      const posicion = props.itemsOrden
+        .map((item) => item.id)
+        .indexOf(productoId);
       if (posicion >= 0) {
         //producto encontrado
         props.itemsOrden[posicion].cantidad++; //--
@@ -12,15 +13,17 @@ const agregarProducto = (productoId)=>{
         props.setTotalPrecioPagar(suma);
         props.setItemsOrden(props.itemsOrden);
       } else {
-        const producto =  props.productos.filter((item) => item.id === productoId)[0];
+        const producto = props.productos.filter(
+          (item) => item.id === productoId
+        )[0];
         const suma = props.totalPrecioPagar + producto.precio;
         props.setTotalPrecioPagar(suma);
         producto.cantidad = 1;
         props.setItemsOrden((oldArray) => [...oldArray, producto]); //nuevo array
         //producto no encontrado
       }
-};
-}
+    }
+  };
   const mostrar = (items) => {
     return items.map((item) => {
       return (
@@ -28,8 +31,9 @@ const agregarProducto = (productoId)=>{
           <div className="col col-md-12  text-center" style={{ margin: 10 }}>
             <button
               type="button"
-              className="btn btn-danger w-80"
-              onClick={()=> agregarProducto(item.id)}>
+              className="btn btn-danger w-70 btn-block "
+              onClick={() => agregarProducto(item.id)}
+            >
               {item.nombre}-{item.precio}
             </button>
           </div>
@@ -38,9 +42,7 @@ const agregarProducto = (productoId)=>{
     });
   };
 
-
   return <>{mostrar(props.productos)}</>;
 };
-
 
 export default MostrarProductos;
