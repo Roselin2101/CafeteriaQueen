@@ -53,31 +53,10 @@ export const Mesonero = () => {
       //eliminamos completo
     }
   };
-  const enviarPedidosCocina = async(event)=> {
-    event.preventDefault()
-   
-    if(!productos.trim()){
-    console.log('esta vacio')
-    return
-    }
-    try{
-      const db = firebase.firestore()
-       const nuevoPedido = {
-         nombre: 'chocolate', 
-         tipo: 1,
-         precio: 2500,
-         id: 0
-      
-       }
-  const data = await db.collection(productos).add(nuevoPedido)
-  setEnviarPedido('')
+  // funcion para agregar pedido a firebase
+  const enviarPedidos = () =>{
 
-    } catch(error){
-
-      console.log(error)
-    }
-   
-    console.log(productos)
+    console.log("aqui enviare los pedidos a firebase")
   }
 
   return (
@@ -146,7 +125,7 @@ export const Mesonero = () => {
                       Total: ${totalPrecioPagar}{" "}
                       <button
                         className="btn btn-danger btn-block "
-                        onClick={() => enviarPedidosCocina() }
+                        onClick={() => enviarPedidos() }
                       >Enviar
                       </button>
                     </div>
