@@ -3,6 +3,7 @@ import productosMenu from "./menu.json";
 import MostrarProductos from "./MostrarProductos";
 import MostrarItems from "./MostrarItems";
 import Header from "./Header";
+import  firebase from "../firebase"
 
 export const Mesonero = () => {
   const [tipoProductoId, setTipoProductoId] = React.useState();
@@ -10,6 +11,7 @@ export const Mesonero = () => {
   const [productoId, setProductoId] = React.useState();
   const [itemsOrden, setItemsOrden] = React.useState([]);
   const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
+  const [enviarPedido, setEnviarPedido] =React.useState([])
 
   React.useEffect(() => {
     setProductos(productosMenu.filter((item) => item.tipo === tipoProductoId));
@@ -51,6 +53,32 @@ export const Mesonero = () => {
       //eliminamos completo
     }
   };
+  const enviarPedidosCocina = async(event)=> {
+    event.preventDefault()
+   
+    if(!productos.trim()){
+    console.log('esta vacio')
+    return
+    }
+    try{
+      const db = firebase.firestore()
+       const nuevoPedido = {
+         nombre: 'chocolate', 
+         tipo: 1,
+         precio: 2500,
+         id: 0
+      
+       }
+  const data = await db.collection(productos).add(nuevoPedido)
+  setEnviarPedido('')
+
+    } catch(error){
+
+      console.log(error)
+    }
+   
+    console.log(productos)
+  }
 
   return (
     <>
@@ -118,9 +146,8 @@ export const Mesonero = () => {
                       Total: ${totalPrecioPagar}{" "}
                       <button
                         className="btn btn-danger btn-block "
-                        onClick={() => alert("Hola me diste un click")}
-                      >
-                        Enviar
+                        onClick={() => enviarPedidosCocina() }
+                      >Enviar
                       </button>
                     </div>
                   </div>
