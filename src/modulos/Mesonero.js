@@ -3,7 +3,7 @@ import productosMenu from "./menu.json";
 import MostrarProductos from "./MostrarProductos";
 import MostrarItems from "./MostrarItems";
 import Header from "./Header";
-import  firebase from "../firebase"
+import firebase from "../firebase";
 
 export const Mesonero = () => {
   const [tipoProductoId, setTipoProductoId] = React.useState();
@@ -11,7 +11,10 @@ export const Mesonero = () => {
   const [productoId, setProductoId] = React.useState();
   const [itemsOrden, setItemsOrden] = React.useState([]);
   const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
-  const [enviarPedido, setEnviarPedido] =React.useState([])
+  const [nombreCliente, setNombreCliente] = React.useState();
+  const [numeroMesa, setNumeroMesa]= React.useState();
+  const [enviarPedido, setEnviarPedido] = React.useState([]);
+
 
   React.useEffect(() => {
     setProductos(productosMenu.filter((item) => item.tipo === tipoProductoId));
@@ -52,12 +55,23 @@ export const Mesonero = () => {
       setTotalPrecioPagar(suma);
       //eliminamos completo
     }
+  // funcion para nombre cliente 
+  const cambioNombreCliente = (e) =>{
+    setNombreCliente(e.target.value);
+}
+
+//funcion cambiar numero de mesa
+const cambioNumeroMesa= (e) =>{     
+  setNumeroMesa(e.target.value);
+}
+
+
   };
   // funcion para agregar pedido a firebase
-  const enviarPedidos = () =>{
+  const enviarPedidos = () => {
+    console.log("aqui enviare los pedidos a firebase");
+  };
 
-    console.log("aqui enviare los pedidos a firebase")
-  }
 
   return (
     <>
@@ -113,6 +127,14 @@ export const Mesonero = () => {
               <div className="card-header text-center">Pedidos</div>
               <ul className="list-group list-group-flush">
                 {" "}
+                <li className="list-group-item  bg-light font-weight-bold">
+                  <div className="row">
+                    <div className="col col-md-1 text-center"></div>
+                    <div className="col col-md-2 ">Cantidad</div>
+                    <div className="col col-md-7">Producto</div>
+                    <div className="col col-md-2">Precio</div>
+                  </div>
+                </li>
                 <MostrarItems
                   items={itemsOrden}
                   eliminarItems={eliminarItems}
@@ -120,14 +142,47 @@ export const Mesonero = () => {
                 <li className="list-group-item">
                   <div className="row">
                     <div className="col col-md-1 text-center"></div>
-                    <div className="col col-md-5 text-center"></div>
-                    <div className="col col-md-5 text-right">
-                      Total: ${totalPrecioPagar}{" "}
+                    <div className="col col-md-6 text-center">
                       <button
                         className="btn btn-danger btn-block "
-                        onClick={() => enviarPedidos() }
-                      >Enviar
+                        onClick={() => enviarPedidos()}
+                      >
+                        Enviar{" "}
                       </button>
+                    </div>
+                    <div className="col col-md-2 text-right bg-light font-weight-bold">
+                      Total:
+                    </div>
+                    <div className="col col-md-3 text-center">
+                      ${totalPrecioPagar}{" "}
+                    </div>
+                  </div>
+                </li>
+                <li className="list-group-item">
+                  <div className="row">
+                    <div className="col col-md-4 text-center"> Nombre Cliente: </div>
+                    <div className="col col-md-8 text-center">
+                      <input
+                        value={nombreCliente} 
+                        onChange={cambioNombreCliente}
+                        description="Nombre"
+                        placeholder="Ingresa Nombre"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li className="list-group-item">
+                  <div className="row">
+                    <div className="col col-md-4 text-center"> Numero Mesa:</div>
+                    <div className="col col-md-8 text-center">
+                      <input
+                        value={numeroMesa}
+                        onChange={cambioNumeroMesa}
+                        description="Numero"
+                        placeholder="Numero Mesa"
+                        type="numero"
+                      />
                     </div>
                   </div>
                 </li>
