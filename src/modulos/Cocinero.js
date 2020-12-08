@@ -41,7 +41,7 @@ const eliminar = async(id)=>{
       <Header />
       <div className="container mt-3  table-danger">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 text-center font-weight-bold">
             Listado Clientes - Mesas
             <ul className="list-group">
               {pedidos.map((item) => (
@@ -57,25 +57,28 @@ const eliminar = async(id)=>{
                         <div className="col col-md-8">{item.cliente}</div>
                       </div>
                     </div>
-                    <div className="col col-md-7">
+                    <div className="col col-md-7 table-responsive-md">
                       {item.productos.map((producto) => (
                         <div className="row">
-                          <div className="col col-md-1">
+                          <div className="col col-md-1 table-responsive-md">
                             {producto.cantidad}
                           </div>
-                          <div className="col col-md-6">{producto.nombre}</div>
+                          <div className="col col-md-5 table-responsive-md">{producto.nombre}</div>
                         </div>
                       ))}
                     </div>
-                    <div className="col col-md-5">
+                    <div className="row">
+                    <div className="col col-md-6">
                       <button
                         type="button"
-                        className="btn btn-success btn-sm float-light  mr-2"
+                        className="btn btn-success btn-sm float-light"
                         onClick={() => alert("El pedido se encuentra listo")}
                       >
                         {" "}
                         Listo
                       </button>
+                      </div>
+                      <div className="col col-md-6">
                       <button
                         type="button"
                         className="btn btn-danger btn-sm float-right"
@@ -84,6 +87,7 @@ const eliminar = async(id)=>{
                         {" "}
                         Eliminar
                       </button>
+                      </div>
                     </div>
                   </div>
                 </li>

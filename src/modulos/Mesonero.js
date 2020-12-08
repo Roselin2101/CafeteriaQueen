@@ -141,7 +141,7 @@ export const Mesonero = () => {
           </div>
           <div className="col col-md-6">
             <div className="card">
-              <div className="card-header text-center  bg-light font-weight-bold">
+              <div className="card-header text-center bg-light font-weight-bold">
                 Pedidos
               </div>
               <ul className="list-group list-group-flush">
