@@ -18,9 +18,9 @@ const MostrarItems = (props) => {
                     </div>
                     <div className="col col-md-2">
                     ${item.precio}
-                    </div>
-                  </div>
-                </li>
+                </div>
+             </div>
+         </li>
         </>
       );
     });
