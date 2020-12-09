@@ -148,10 +148,10 @@ export const Mesonero = () => {
                 {" "}
                 <li className="list-group-item  bg-light font-weight-bold">
                   <div className="row">
-                    <div className="col col-md-1 text-center"></div>
-                    <div className="col col-md-2 ">Cantidad</div>
-                    <div className="col col-md-7">Producto</div>
-                    <div className="col col-md-2">Precio</div>
+
+                    <div className="col col-md-4 ">Cantidad</div>
+                    <div className="col col-md-4">Producto</div>
+                    <div className="col col-md-4">Precio</div>
                   </div>
                 </li>
                 <MostrarItems

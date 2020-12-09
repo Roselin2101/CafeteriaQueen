@@ -24,6 +24,7 @@ const MostrarProductos = (props) => {
       }
     }
   };
+  
   const mostrar = (items) => {
     return items.map((item) => {
       return (
@@ -35,6 +36,7 @@ const MostrarProductos = (props) => {
               onClick={() => agregarProducto(item.id)}
             >
               {item.nombre}-{item.precio}
+              
             </button>
           </div>
         </div>

@@ -35,11 +35,10 @@ const eliminar = async(id)=>{
     }
 }
 
-
   return (
     <>
       <Header />
-      <div className="container mt-3  table-danger">
+      <div className="container mt-3  table-responsive-md table-danger">
         <div className="row">
           <div className="col-md-12 text-center font-weight-bold">
             Listado Clientes - Mesas
