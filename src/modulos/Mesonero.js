@@ -10,9 +10,10 @@ export const Mesonero = () => {
   const [productos, setProductos] = React.useState([]);
   const [productoId, setProductoId] = React.useState();
   const [itemsOrden, setItemsOrden] = React.useState([]);
-  const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
   const [nombreCliente, setNombreCliente] = React.useState();
   const [numeroMesa, setNumeroMesa] = React.useState();
+  const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
+
 
   React.useEffect(() => {
     setProductos(productosMenu.filter((item) => item.tipo === tipoProductoId));
@@ -192,7 +193,6 @@ export const Mesonero = () => {
                     </div>
                   </div>
                 </li>
-
 
                 <li className="list-group-item">
                   <div className="row">
