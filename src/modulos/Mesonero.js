@@ -158,26 +158,7 @@ export const Mesonero = () => {
                   items={itemsOrden}
                   eliminarItems={eliminarItems}
                 />
-                <li className="list-group-item">
-                  <div className="row">
-                    <div className="col col-md-1 text-center"></div>
-                    <div className="col col-md-6 text-center">
-                      <button
-                        className="btn btn-danger btn-block "
-                        onClick={() => enviarPedidos()}
-                      >
-                        Enviar{" "}
-                      </button>
-                    </div>
-                    <div className="col col-md-2 text-right bg-light font-weight-bold">
-                      Total:
-                    </div>
-                    <div className="col col-md-3 text-center">
-                      ${totalPrecioPagar}{" "}
-                    </div>
-                  </div>
-                </li>
-                <li className="list-group-item  bg-light font-weight-bold">
+<li className="list-group-item  bg-light font-weight-bold">
                   <div className="row">
                     <div className="col col-md-4 text-center">
                       {" "}
@@ -211,6 +192,28 @@ export const Mesonero = () => {
                     </div>
                   </div>
                 </li>
+
+
+                <li className="list-group-item">
+                  <div className="row">
+                    <div className="col col-md-1 text-center"></div>
+                    <div className="col col-md-6 text-center">
+                      <button
+                        className="btn btn-danger btn-block "
+                        onClick={() => enviarPedidos()}
+                      >
+                        Enviar{" "}
+                      </button>
+                    </div>
+                    <div className="col col-md-2 text-right bg-light font-weight-bold">
+                      Total:
+                    </div>
+                    <div className="col col-md-3 text-center">
+                      ${totalPrecioPagar}{" "}
+                    </div>
+                  </div>
+                </li>
+                
               </ul>
             </div>
           </div>
