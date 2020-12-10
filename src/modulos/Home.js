@@ -5,30 +5,34 @@ export const Home = () => {
 
   return (
     <>
+
    <Header/>
+   <br></br>
+   <br></br>
+  
       <div className="col col-md-12">
         <div className="row">
           <div className="col col-md-6 text-center">
-          <img width="304"
-              height="236"
+          <a href="/mesonero"><img width="304"
+              height="200"
               src="assets/imagenes/mesonero.jpg"
               alt="Maravillosas son tus Obras Dios"
               className="rounded mx-auto d-block img-responsive"
               style={{ margin: 15 }}
-            />
+            />   </a>
             <a href="/mesonero" className="btn btn-danger btn-md btn-block">
               {" "}
               Mesonero 
             </a>
           </div>
           <div className="col col-md-6 text-center">
-          <img width="304"
-              height="236"
+          <a href="/cocinero"> <img width="304"
+              height="200"
               src="assets/imagenes/cocinero.jpg"
               alt="Maravillosas son tus Obras Dios"
               className="rounded mx-auto d-block img-responsive"
               style={{ margin: 15 }}
-            />
+            /> </a>
             <a href="/cocinero" className="btn btn-danger btn-md btn-block">
               {" "}
               Cocinero

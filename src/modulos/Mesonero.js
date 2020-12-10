@@ -92,6 +92,8 @@ export const Mesonero = () => {
   return (
     <>
       <Header />
+      <br></br>
+      <br></br>
       <div className="col col-md-12 table-danger">
         <div className="row">
           <div className="col col-md-6">
@@ -147,9 +149,8 @@ export const Mesonero = () => {
               </div>
               <ul className="list-group list-group-flush">
                 {" "}
-                <li className="list-group-item  bg-light font-weight-bold">
+                <li className="list-group-item  bg-light font-weight-bold table-responsive">
                   <div className="row">
-
                     <div className="col col-md-4 ">Cantidad</div>
                     <div className="col col-md-4">Producto</div>
                     <div className="col col-md-4">Precio</div>
@@ -194,10 +195,10 @@ export const Mesonero = () => {
                   </div>
                 </li>
 
-                <li className="list-group-item">
+                <li className="list-group-item table-responsive">
                   <div className="row">
                     <div className="col col-md-1 text-center"></div>
-                    <div className="col col-md-6 text-center">
+                    <div className="col col-md-5 text-center">
                       <button
                         className="btn btn-danger btn-block "
                         onClick={() => enviarPedidos()}
@@ -205,7 +206,7 @@ export const Mesonero = () => {
                         Enviar{" "}
                       </button>
                     </div>
-                    <div className="col col-md-2 text-right bg-light font-weight-bold">
+                    <div className="col col-md-3 text-right bg-light font-weight-bold">
                       Total:
                     </div>
                     <div className="col col-md-3 text-center">
@@ -213,7 +214,6 @@ export const Mesonero = () => {
                     </div>
                   </div>
                 </li>
-                
               </ul>
             </div>
           </div>
