@@ -40,10 +40,10 @@ const eliminar = async(id)=>{
       <Header />
       <br></br>
       <br></br>
-      <div className="container mt-3  table-responsive-md table-danger">
+      <div className="container mt-3  table-responsive-md table-light">
         <div className="row">
           <div className="col-md-12 text-center font-weight-bold">
-            Listado Clientes - Mesas
+            Listado Clientes  -   Mesas
             <ul className="list-group">
               {pedidos.map((item) => (
                 <li className="list-group-item" key={item.id}>
@@ -72,7 +72,7 @@ const eliminar = async(id)=>{
                     <div className="col col-md-6">
                       <button
                         type="button"
-                        className="btn btn-success btn-sm float-light"
+                        className="btn btn-outline-warning btn-sm float-light"
                         onClick={() => alert("El pedido se encuentra listo")}
                       >
                         {" "}
@@ -82,7 +82,7 @@ const eliminar = async(id)=>{
                       <div className="col col-md-6">
                       <button
                         type="button"
-                        className="btn btn-danger btn-sm float-right"
+                        className="btn btn-outline-warning btn-sm float-right"
                         onClick={() => eliminar(item.id)}
                       >
                         {" "}

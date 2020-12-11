@@ -32,11 +32,10 @@ const MostrarProductos = (props) => {
           <div className="col col-md-12  text-center" style={{ margin: 10 }}>
             <button
               type="button"
-              className="btn btn-danger w-70 btn-block "
+              className="btn btn-warning  w-70 btn-block "
               onClick={() => agregarProducto(item.id)}
             >
               {item.nombre}-{item.precio}
-              
             </button>
           </div>
         </div>
