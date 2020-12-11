@@ -12,7 +12,7 @@ import React from "react";
   </form>
   <a href="/"><img
               src="assets/imagenes/logo.png"
-              height= "100"
+              height= "90"
               alt="Maravillosas son tus Obras Dios"
               className="rounded mx-auto d-block img-responsive"
               style={{ margin: 10 }}

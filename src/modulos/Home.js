@@ -20,8 +20,6 @@ export const Home = () => {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
             
       <div className="col col-md-12">
         <div className="row">

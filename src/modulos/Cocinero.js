@@ -72,7 +72,7 @@ const eliminar = async(id)=>{
                     <div className="col col-md-6">
                       <button
                         type="button"
-                        className="btn btn-outline-warning btn-sm float-light"
+                        className="btn btn-warning btn-sm float-light"
                         onClick={() => alert("El pedido se encuentra listo")}
                       >
                         {" "}
@@ -82,7 +82,7 @@ const eliminar = async(id)=>{
                       <div className="col col-md-6">
                       <button
                         type="button"
-                        className="btn btn-outline-warning btn-sm float-right"
+                        className="btn btn-warning btn-sm float-right"
                         onClick={() => eliminar(item.id)}
                       >
                         {" "}
