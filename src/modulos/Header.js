@@ -8,7 +8,7 @@ import React from "react";
 
 <nav class="navbar navbar-light bg-light  ">
   <form class="form-inline">
-  <a href="/"> <button class="btn btn-outline-warning  mr-2" type="button">Inicio</button></a>
+  <a href="/"> <button class="btn btn-warning  mr-2" type="button">Inicio</button></a>
   </form>
   <a href="/"><img
               src="assets/imagenes/logo.png"

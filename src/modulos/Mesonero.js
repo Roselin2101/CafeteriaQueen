@@ -94,7 +94,7 @@ export const Mesonero = () => {
       <Header />
       <br></br>
       <br></br>
-      <div className="col col-md-12 table-outline-danger">
+      <div className="col col-md-12 table-outline-warning">
         <div className="row">
           <div className="col col-md-6">
             <div className="card">
@@ -111,7 +111,7 @@ export const Mesonero = () => {
                   <div className="col col-md-6 text-center">
                     <button
                       type="button"
-                      className="btn btn-outline-warning  w-100"
+                      className="btn btn-warning  w-100"
                       onClick={() => setTipoProductoId(2)}
                     >
                       Tortas
@@ -120,7 +120,7 @@ export const Mesonero = () => {
                   <div className="col col-md-6 text-center">
                     <button
                       type="button"
-                      className="btn btn-outline-warning  w-100"
+                      className="btn btn-warning  w-100"
                       onClick={() => setTipoProductoId(1)}
                     >
                       Bebidas
@@ -200,7 +200,7 @@ export const Mesonero = () => {
                     <div className="col col-md-1 text-center"></div>
                     <div className="col col-md-5 text-center">
                       <button
-                        className="btn btn-outline-warning  btn-block "
+                        className="btn btn-warning  btn-block "
                         onClick={() => enviarPedidos()}
                       >
                         Enviar{" "}
