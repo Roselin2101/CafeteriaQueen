@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import firebase from "../firebase";
-import mesonero from "./Mesonero";
+
 
 export const Cocinero = () => {
   const [pedidos, setPedidos] = React.useState([]);
@@ -17,10 +17,22 @@ export const Cocinero = () => {
         }));
         console.log(arrayData);
         setPedidos(arrayData);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error)
+      }
     };
     obtenerDatos();
   }, []);
+
+  //funcion pedidos listos
+  const pedidosListos = (id)=>{
+  const pedido = pedidos.filter(item => item.id === id);
+  console.log(pedido);
+  firebase.firebase.firestore().collection("pedidosListos").doc().set(pedido[0]);
+  eliminar(id);
+ }
+ 
+
 // funcion que elimina pedido, cada vez que esta listo 
 const eliminar = async(id)=>{
     try {
@@ -73,20 +85,10 @@ const eliminar = async(id)=>{
                       <button
                         type="button"
                         className="btn btn-warning btn-sm float-light"
-                        onClick={() => alert("El pedido se encuentra listo")}
+                        onClick={() =>pedidosListos(item.id)}
                       >
                         {" "}
                         Listo
-                      </button>
-                      </div>
-                      <div className="col col-md-6">
-                      <button
-                        type="button"
-                        className="btn btn-warning btn-sm float-right"
-                        onClick={() => eliminar(item.id)}
-                      >
-                        {" "}
-                        Eliminar
                       </button>
                       </div>
                     </div>

@@ -5,6 +5,7 @@ import MostrarItems from "./MostrarItems";
 import Header from "./Header";
 import firebase from "../firebase";
 
+
 export const Mesonero = () => {
   const [tipoProductoId, setTipoProductoId] = React.useState();
   const [productos, setProductos] = React.useState([]);
@@ -13,6 +14,7 @@ export const Mesonero = () => {
   const [nombreCliente, setNombreCliente] = React.useState();
   const [numeroMesa, setNumeroMesa] = React.useState();
   const [totalPrecioPagar, setTotalPrecioPagar] = React.useState(0);
+  const [pedidosListoServir, setPedidosListoServir] = React.useState([]);
 
 
   React.useEffect(() => {
@@ -38,6 +40,25 @@ export const Mesonero = () => {
       }
     }
   }, [productoId]);
+ 
+  React.useEffect(() => {
+    const obtenerDatosPedidosListos = async () => {
+      try {
+        const db = firebase.firebase.firestore();
+        const dataPedidosListos = await db.collection("pedidosListos").get();
+        const arrayDataPedidos = dataPedidosListos.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log(arrayDataPedidos);
+        setPedidosListoServir(arrayDataPedidos);
+      } catch (error) {
+        console.log(error)
+      }
+    };
+    obtenerDatosPedidosListos();
+  }, []);
+
 
   const eliminarItems = (productoId) => {
     const posicion = itemsOrden.map((item) => item.id).indexOf(productoId);
@@ -67,11 +88,7 @@ export const Mesonero = () => {
         return { nombre: item.nombre, cantidad: item.cantidad };
       }),
     };
-    firebase.firebase
-      .firestore()
-      .collection("pedidos")
-      .doc(nombreCliente + "-" + numeroMesa)
-      .set(pedido);
+    firebase.firebase.firestore().collection("pedidos").doc().set(pedido);
     setNombreCliente("");
     setNumeroMesa("");
     setProductoId("");
@@ -88,7 +105,20 @@ export const Mesonero = () => {
   const cambioNumeroMesa = (e) => {
     setNumeroMesa(e.target.value);
   };
+// funcion que elimina pedido, cada vez que se le entregue al cliente
 
+const eliminarPedidosListos = async(id)=>{
+  try {
+      const db = firebase.firebase.firestore()
+      await db.collection("pedidosListos").doc(id).delete()
+      
+      const arrayFiltrado= pedidosListoServir.filter(item => item.id !== id)
+      setPedidosListoServir(arrayFiltrado)
+  
+  } catch (error) {
+      console.log(error)
+  }
+}
   return (
     <>
       <Header />
@@ -219,6 +249,56 @@ export const Mesonero = () => {
           </div>
         </div>
       </div>
+      <div className="col col-md-12 table-outline-warning">
+        <div className="row">
+          <div className="col col-md-6">
+            <div className="card">
+              <div className="card-header text-center bg-light font-weight-bold ">
+                Pedidos Listos Para Entregar a Clientes
+                <ul className="list-group">
+              {pedidosListoServir.map((item) => (
+                <li className="list-group-item" key={item.id}>
+                  <div className="row">
+                    <div class="col col-md-4">
+                      <div className="row">
+                        <div className="col col-md-7">Mesa:</div>
+                        <div className="col col-md-5">{item.mesa}</div>
+                      </div>
+                      <div className="row">
+                        <div className="col col-md-7">Cliente:</div>
+                        <div className="col col-md-5">{item.cliente}</div>
+                      </div>
+                    </div>
+                    <div className="col col-md-7 table-responsive-md">
+                      {item.productos.map((producto) => (
+                        <div className="row">
+                          <div className="col col-md-1 table-responsive-md">
+                            {producto.cantidad}
+                          </div>
+                          <div className="col col-md-5 table-responsive-md">{producto.nombre}</div>
+                        </div>
+                      ))}
+                      <div className="row">
+                    <div className="col col-md ">
+                       <button
+                      type="button"
+                      className="btn btn-warning  w-80"
+                      onClick={() => eliminarPedidosListos(item.id)}
+                    >
+                      EliminarPedido
+                    </button>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+              </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
     </>
   );
 };
