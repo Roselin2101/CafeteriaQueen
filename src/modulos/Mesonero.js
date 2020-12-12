@@ -253,15 +253,15 @@ const eliminarPedidosListos = async(id)=>{
         <div className="row">
           <div className="col col-md-6">
             <div className="card">
-              <div className="card-header text-center bg-light font-weight-bold ">
+              <div className="card-header text-center bg-light font-weight-bold md">
                 Pedidos Listos Para Entregar a Clientes
                 <ul className="list-group">
               {pedidosListoServir.map((item) => (
                 <li className="list-group-item" key={item.id}>
                   <div className="row">
-                    <div class="col col-md-4">
+                    <div class="col col-md-">
                       <div className="row">
-                        <div className="col col-md-7">Mesa:</div>
+                        <div className="col col-md-7">NroMesa:</div>
                         <div className="col col-md-5">{item.mesa}</div>
                       </div>
                       <div className="row">
@@ -269,23 +269,23 @@ const eliminarPedidosListos = async(id)=>{
                         <div className="col col-md-5">{item.cliente}</div>
                       </div>
                     </div>
-                    <div className="col col-md-7 table-responsive-md">
+                    <div className="col col-md- table-responsive-md">
                       {item.productos.map((producto) => (
                         <div className="row">
-                          <div className="col col-md-1 table-responsive-md">
+                          <div className="col col-md-3 table-responsive-md">
                             {producto.cantidad}
                           </div>
-                          <div className="col col-md-5 table-responsive-md">{producto.nombre}</div>
+                          <div className="col col-md-9 table-responsive-md">{producto.nombre}</div>
                         </div>
                       ))}
                       <div className="row">
                     <div className="col col-md ">
                        <button
                       type="button"
-                      className="btn btn-warning  w-80"
+                      className="btn btn-warning  w-80 "
                       onClick={() => eliminarPedidosListos(item.id)}
                     >
-                      EliminarPedido
+                      Entregado
                     </button>
                     </div>
                     </div>

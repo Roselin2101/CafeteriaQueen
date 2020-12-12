@@ -6,7 +6,8 @@ import React from "react";
   return (
     <>
 
-<nav class="navbar navbar-light bg-light  ">
+<nav class="navbar navbar-light 
+  ">
   <form class="form-inline">
   <a href="/"> <button class="btn btn-warning  mr-2" type="button">Inicio</button></a>
   </form>

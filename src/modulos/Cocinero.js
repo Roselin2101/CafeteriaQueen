@@ -26,12 +26,17 @@ export const Cocinero = () => {
 
   //funcion pedidos listos
   const pedidosListos = (id)=>{
-  const pedido = pedidos.filter(item => item.id === id);
-  console.log(pedido);
-  firebase.firebase.firestore().collection("pedidosListos").doc().set(pedido[0]);
-  eliminar(id);
- }
- 
+    const pedido = pedidos.filter(item => item.id === id);
+    const pedidoGuardar = {
+      cliente:pedido[0].cliente,
+      mesa:pedido[0].mesa,
+      fecha:pedido[0].fecha,
+      fechaListo:new Date(),
+      productos:pedido[0].productos
+    }
+    firebase.firebase.firestore().collection("pedidosListos").doc().set(pedidoGuardar);
+    eliminar(id);
+   }
 
 // funcion que elimina pedido, cada vez que esta listo 
 const eliminar = async(id)=>{
@@ -46,31 +51,30 @@ const eliminar = async(id)=>{
         console.log(error)
     }
 }
-
   return (
     <>
       <Header />
       <br></br>
       <br></br>
-      <div className="container mt-3  table-responsive-md table-light">
+      <div className="container mt-3  table-responsive-md table-light card">
         <div className="row">
-          <div className="col-md-12 text-center font-weight-bold">
+          <div className="col-md-12 text-center font-weight-bold card-header ">
             Listado Clientes  -   Mesas
             <ul className="list-group">
               {pedidos.map((item) => (
                 <li className="list-group-item" key={item.id}>
                   <div className="row">
-                    <div class="col col-md-4">
+                    <div class="col col-md-">
                       <div className="row">
-                        <div className="col col-md-4">Mesa:</div>
-                        <div className="col col-md-8">{item.mesa}</div>
+                        <div className="col col-md-5">NroMesa</div>
+                        <div className="col col-md-7">{item.mesa}</div>
                       </div>
                       <div className="row">
-                        <div className="col col-md-4">Cliente:</div>
-                        <div className="col col-md-8">{item.cliente}</div>
+                        <div className="col col-md-5">Cliente:</div>
+                        <div className="col col-md-7">{item.cliente}</div>
                       </div>
                     </div>
-                    <div className="col col-md-7 table-responsive-md">
+                    <div className="col col-md- table-responsive-md">
                       {item.productos.map((producto) => (
                         <div className="row">
                           <div className="col col-md-1 table-responsive-md">
