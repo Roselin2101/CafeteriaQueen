@@ -18,7 +18,7 @@ Es una pequeña Cafetería Gourmet Dulce Alegría, es un proyecto familiar que n
 
 Puedes observar a la App instalada en el siguiente enlace:
 
- [https://proyecto-bq.web.app/mesonero](https://proyecto-bq.web.app/mesonero)
+ [https://proyecto-bq.web.app/](https://proyecto-bq.web.app/)
 
 
 Así quedo la App para la Cafetería:
@@ -29,10 +29,6 @@ Así quedo la App para la Cafetería:
 
 
 ![image](https://user-images.githubusercontent.com/66626147/102000190-9caffa80-3cc3-11eb-8476-2b3544eb587e.png)
-
-
-
-![image](https://user-images.githubusercontent.com/66626147/102000219-e862a400-3cc3-11eb-91ac-9dfe6eaeb063.png)
 
 
 
@@ -62,8 +58,12 @@ Se asemeja a la pagina real:
 
 Para realizar el prototipo se evaluaron los colores que se deberian colocar y se ocupo la siguiente paleta de color, la cual fue ilustrada segun el logo del restaurante y de la imagen del propio restaurante, es decir de su estructura y su aspecto:
 
+Paleta de Colores: 
+
 ![image](https://user-images.githubusercontent.com/66626147/102000607-e569b280-3cc7-11eb-992f-cbca7baad90a.png)
 
+
+Caferteria 
 
 ![image](https://user-images.githubusercontent.com/66626147/102000572-81df8500-3cc7-11eb-9fda-1c5ca6675b58.png)
 
