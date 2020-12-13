@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+- [1. Resumen del proyecto](#1-Resumen-del-Proyecto)
+- [2. 2. Producto final ](#2-Principales-usuarios-del-producto)
+- [3. Resolucion de problemas al usuario](#3-Resolucion-de-problemas-al-usuario)
+- [4. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)](#4-Diseño-de-la-Interfaz-de-Usuario)
+- [5. Prototipo de alta fidelidad](#5-Prototipo-de-alta-fidelidad)
+- [6. Recursos](#6-Recursos)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# 1-Resumen del Proyecto Caffe Dulce Alegria
+
+![image](https://user-images.githubusercontent.com/66626147/101999842-ae8f9e80-3cbf-11eb-8410-de7d99e73c16.png)
+
+La Historia de Dulce Alegría
+
+Es una pequeña Cafetería Gourmet Dulce Alegría, es un proyecto familiar que nace desde el esfuerzo y la profunda dedicación de un joven matrimonio Puentealtino. Aqui se ofrecen deliciosas tortas y café de diversos sabores. 
 
 ## Available Scripts
 
@@ -35,36 +47,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
