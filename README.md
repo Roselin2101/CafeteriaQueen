@@ -1,12 +1,12 @@
-- [1. Resumen del proyecto](#1-Resumen-del-Proyecto)
-- [2. 2. Producto final ](#2-Principales-usuarios-del-producto)
+- [1. Resumen del proyecto Cafeteria Dulce Alegria](#1-Resumen-del-Proyecto)
+- [2. Producto final del proyecto](#2-Producto-final-del-proyecto)
 - [3. Resolucion de problemas al usuario](#3-Resolucion-de-problemas-al-usuario)
-- [4. Diseño de la Interfaz de Usuario (prototipo de baja fidelidad)](#4-Diseño-de-la-Interfaz-de-Usuario)
-- [5. Prototipo de alta fidelidad](#5-Prototipo-de-alta-fidelidad)
-- [6. Recursos](#6-Recursos)
+- [4. Diseño de la Interfaz de Usuario](#4-Diseño-de-la-Interfaz-de-Usuario)
+- [5. Recursos](#6-Recursos)
 
 
-# 1-Resumen del Proyecto Caffe Dulce Alegria
+# 1. Resumen del Proyecto Cafeteria Dulce Alegria
+
 
 ![image](https://user-images.githubusercontent.com/66626147/101999842-ae8f9e80-3cbf-11eb-8410-de7d99e73c16.png)
 
@@ -14,36 +14,56 @@ La Historia de Dulce Alegría
 
 Es una pequeña Cafetería Gourmet Dulce Alegría, es un proyecto familiar que nace desde el esfuerzo y la profunda dedicación de un joven matrimonio Puentealtino. Aqui se ofrecen deliciosas tortas y café de diversos sabores. 
 
-## Available Scripts
+# 2. Producto final del Proyecto Cafeteria Dulce Alegria
 
-In the project directory, you can run:
+Puedes observar a la App instalada en el siguiente enlace:
+ [https://proyecto-bq.web.app/mesonero](https://proyecto-bq.web.app/mesonero)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Así quedo la App para la Cafetería:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+![image](https://user-images.githubusercontent.com/66626147/102000201-c10bd700-3cc3-11eb-8ae7-b6517834d6d8.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/66626147/102000190-9caffa80-3cc3-11eb-8476-2b3544eb587e.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/66626147/102000219-e862a400-3cc3-11eb-91ac-9dfe6eaeb063.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 3. Resolucion de problemas al usuario
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Debido al crecimiento que ha tenido Cafetería Dulce Alegría en los últimos años, se planteo la necesidad de una APP que les permitirá a los mesoneros tomar los pedidos de los clientes desde sus respectivas mesas de forma facil y sencilla, y que a su vez, estos puedan  enviar inmediatamente la información a la cocina donde se encargaran de preparar dichos pedidos. Al estar listos los pedidos se enviara un aviso a mesonero. Para así lograr atender a la clientela en poco tiempo y con mayor facilidad.
+
+# 4. Diseño de la Interfaz de Usuario
+
+## Prototipo de baja fidelidad
+
+Se utilizo imagenes del restaurante para isnpiración del diseño: 
+
+![image](https://user-images.githubusercontent.com/66626147/102000614-07fbcb80-3cc8-11eb-84fb-60cdfbaea090.png)
+
+![image](https://user-images.githubusercontent.com/66626147/102000626-22ce4000-3cc8-11eb-8a68-077ec94c2fa6.png)
+
+## Prototipo de alta fidelidad
+
+Se asemeja a la pagina real: 
+
+![image](https://user-images.githubusercontent.com/66626147/102000201-c10bd700-3cc3-11eb-8ae7-b6517834d6d8.png)
+
+
+# 5. Recursos
+
+Para realizar el prototipo se evaluaron los colores que se deberian colocar y se ocupo la siguiente paleta de color, la cual fue ilustrada segun el logo del restaurante y de la imagen del propio restaurante, es decir de su estructura y su aspecto:
+
+
+![image](https://user-images.githubusercontent.com/66626147/102000718-0088f200-3cc9-11eb-8401-12d58f7d6575.png)
+
+![image](https://user-images.githubusercontent.com/66626147/102000572-81df8500-3cc7-11eb-9fda-1c5ca6675b58.png)
+
+
+![image](https://user-images.githubusercontent.com/66626147/102000607-e569b280-3cc7-11eb-992f-cbca7baad90a.png)
+
 
