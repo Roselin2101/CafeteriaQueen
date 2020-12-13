@@ -17,6 +17,7 @@ Es una pequeña Cafetería Gourmet Dulce Alegría, es un proyecto familiar que n
 # 2. Producto final del Proyecto Cafeteria Dulce Alegria
 
 Puedes observar a la App instalada en el siguiente enlace:
+
  [https://proyecto-bq.web.app/mesonero](https://proyecto-bq.web.app/mesonero)
 
 
@@ -26,7 +27,9 @@ Así quedo la App para la Cafetería:
 ![image](https://user-images.githubusercontent.com/66626147/102000201-c10bd700-3cc3-11eb-8ae7-b6517834d6d8.png)
 
 
+
 ![image](https://user-images.githubusercontent.com/66626147/102000190-9caffa80-3cc3-11eb-8476-2b3544eb587e.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/66626147/102000219-e862a400-3cc3-11eb-91ac-9dfe6eaeb063.png)
@@ -45,6 +48,7 @@ Se utilizo imagenes del restaurante para isnpiración del diseño:
 
 ![image](https://user-images.githubusercontent.com/66626147/102000614-07fbcb80-3cc8-11eb-84fb-60cdfbaea090.png)
 
+
 ![image](https://user-images.githubusercontent.com/66626147/102000626-22ce4000-3cc8-11eb-8a68-077ec94c2fa6.png)
 
 ## Prototipo de alta fidelidad
@@ -58,12 +62,12 @@ Se asemeja a la pagina real:
 
 Para realizar el prototipo se evaluaron los colores que se deberian colocar y se ocupo la siguiente paleta de color, la cual fue ilustrada segun el logo del restaurante y de la imagen del propio restaurante, es decir de su estructura y su aspecto:
 
+![image](https://user-images.githubusercontent.com/66626147/102000607-e569b280-3cc7-11eb-992f-cbca7baad90a.png)
 
-![image](https://user-images.githubusercontent.com/66626147/102000718-0088f200-3cc9-11eb-8401-12d58f7d6575.png)
 
 ![image](https://user-images.githubusercontent.com/66626147/102000572-81df8500-3cc7-11eb-9fda-1c5ca6675b58.png)
 
 
-![image](https://user-images.githubusercontent.com/66626147/102000607-e569b280-3cc7-11eb-992f-cbca7baad90a.png)
+
 
 
