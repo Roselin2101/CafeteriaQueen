@@ -1,8 +1,8 @@
 import React from "react";
 import productosMenu from "./menu.json";
-import MostrarProductos from "./MostrarProductos";
-import MostrarItems from "./MostrarItems";
-import Header from "./Header";
+import MostrarProductos from "../componentes/MostrarProductos";
+import MostrarItems from "../componentes/MostrarItems";
+import Header from "../componentes/Header";
 import firebase from "../firebase";
 
 
